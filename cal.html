@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Calculator</title>
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+    <link rel="stylesheet" href="cal.css">
+    
+</head>
+<body>
+    <div class="banner">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/002/885/387/small_2x/car-and-calculator-with-coins-on-bookbank-background-car-loan-finance-saving-money-insurance-and-leasing-time-concepts-coins-car-loan-finance-saving-money-insurance-and-leasing-time-concepts-free-photo.jpg" alt="Insurance Calculator">
+    </div>
+    
+    <div class="container">
+        <h2>Insurance Premium Calculator</h2>
+        <label for="insuranceType">Select Insurance Type:</label>
+        <select id="insuranceType" onchange="toggleFields()">
+            <option value="">-- Select --</option>
+            <option value="life">Life Insurance</option>
+            <option value="home">Home Insurance</option>
+        </select>
+        
+        <div id="lifeInsuranceFields" class="hidden">
+            <label for="age">Age:</label>
+            <input type="number" id="age" min="18" max="100">
+            
+            <label for="smoking">Smoking Status:</label>
+            <select id="smoking">
+                <option value="no">Non-Smoker</option>
+                <option value="yes">Smoker</option>
+            </select>
+            
+            <label for="occupation">Occupation Risk:</label>
+            <select id="occupation">
+                <option value="low">Low Risk</option>
+                <option value="high">High Risk</option>
+            </select>
+            
+            <label for="income">Annual Income:</label>
+            <input type="number" id="income" min="0">
+            
+            <label for="health">Existing Health Issues:</label>
+<select id="health">
+    <option value="none">No known health issues</option>
+    <option value="diabetes">Diabetes</option>
+    <option value="hypertension">Hypertension</option>
+    <option value="heart-disease">Heart Disease</option>
+    <option value="asthma">Asthma/Respiratory Issues</option>
+    <option value="cancer">Cancer (in remission)</option>
+    <option value="kidney-disease">Kidney Disease</option>
+    <option value="liver-disease">Liver Disease</option>
+    <option value="mental-health">Mental Health Condition</option>
+</select>
+
+<label for="familyHistory">Family Medical History:</label>
+<select id="familyHistory">
+    <option value="none">No significant family history</option>
+    <option value="heart-disease">Heart Disease (parents/siblings)</option>
+    <option value="cancer">Cancer (parents/siblings)</option>
+    <option value="diabetes">Diabetes (parents/siblings)</option>
+    <option value="stroke">Stroke (parents/siblings)</option>
+    <option value="alzheimers">Alzheimer's/Dementia</option>
+</select>
+        </div>
+        
+        <div id="homeInsuranceFields" class="hidden">
+            <label for="homeValue">Home Value:</label>
+            <input type="number" id="homeValue" min="10000">
+            
+            <label for="construction">Construction Type:</label>
+            <select id="construction">
+                <option value="brick">Brick</option>
+                <option value="wood">Wood</option>
+                <option value="concrete">Concrete</option>
+            </select>
+            
+            <label for="propertyAge">Property Age:</label>
+            <input type="number" id="propertyAge" min="0">
+            
+            <label for="fireStation">Proximity to Fire Station (km):</label>
+            <input type="number" id="fireStation" min="0">
+            
+            <label for="disasterRisk">Flood / Earthquake Zone:</label>
+            <select id="disasterRisk">
+                <option value="low">Low Risk</option>
+                <option value="high">High Risk</option>
+            </select>
+            
+            <label for="contents">Home Contents Value:</label>
+            <input type="number" id="contents" min="1000">
+        </div>
+        
+        <button class="btn" onclick="calculatePremium()">Calculate Premium</button>
+        <h3 id="result"></h3>
+        <div id="finish" class="hidden">
+            <a href="customize.html"><button class="btn">Select Add-ons</button></a>
+            <a href="payments.html"><button class="btn">Proceed to payment</button></a>
+        </div>
+    </div>
+
+    <script src="ca.js"></script>
+    
+</body>
+</html>

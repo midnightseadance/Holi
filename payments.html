@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment</title>
+    <link rel="stylesheet" href="payments.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <h1>Secure Payment for Your Insurance Plan</h1>
+    </header>
+
+    <!-- Pending Payments Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Policy</th>
+                    <th>Amount</th>
+                    <th>Due Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="policy-name">Loading...</td>
+                    <td id="policy-amount">Loading...</td>
+                    <td id="policy-date">Loding...</td>
+                    <td><button class="pay-btn">Pay Now</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Selected Add-ons Section -->
+    <div id="selected-addons">
+        <h2>Selected Add-ons</h2>
+        <ul id="addons-list"></ul>
+    </div>
+
+    <!-- Payment Methods Section (Initially Hidden) -->
+    <div id="payment-methods" class="payment-methods">
+        <h2>Select Payment Method</h2>
+        <div class="methods">
+            <div class="method" onclick="processPayment('Card')">
+                <img src="https://cdn0.iconfinder.com/data/icons/finance-glyph-2/33/card-512.png" alt="Credit/Debit Card">
+                <p>Credit/Debit Card</p>
+            </div>
+            <div class="method" onclick="processPayment('UPI')">
+                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/upi_logo_icon_169316.png" alt="UPI Payment">
+                <p>UPI / Bank Transfer</p>
+            </div>
+            <div class="method" onclick="processPayment('EMI')">
+                <img src="https://static.vecteezy.com/system/resources/previews/009/219/815/non_2x/emi-letter-logo-design-on-black-background-emi-creative-initials-letter-logo-concept-emi-letter-design-vector.jpg" alt="EMI Options">
+                <p>EMI Options</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invoice Section (Hidden Initially) -->
+    <div id="invoice" class="invoice">
+        <h2>Payment Successful ✅</h2>
+        <p><strong>Policy:</strong> <span id="invoice-policy">Loading...</span></p>
+        <p><strong>Amount Paid:</strong> ₹<span id="invoice-amount">0</span></p>
+        <p><strong>Payment Method:</strong> <span id="payment-mode"></span></p>
+        <button onclick="downloadInvoice()">Download Invoice</button>
+        <button onclick="redirectToProfile()" >My Profile</button>
+    </div>
+
+    <script src="p.js"></script>
+</body>
+</html>

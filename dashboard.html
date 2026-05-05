@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Holi Insurance</title>
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="1000007226.jpg" alt="Holi Insurance Logo" class="logo">
+            <div class="brand-name">Holi Insurance</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="acc.html">My Profile</a></li>
+                <!--li><a href="cal.html">Customize Plan</a></li-->
+                <li><a href="mypolicies.html">My Policies</a></li>
+                <li><a href="cal.html">Calculator</a></li>
+                <li><a href="fc.html">File a Claim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dashboard Banner -->
+    <section class="banner">
+        <img src="https://www.healthmarkets.com/wp-content/uploads/2016/05/fg-health-family-700x493.png" alt="Dashboard Banner">
+    </section>
+
+    <main class="dashboard-container">
+        <section class="welcome-message">
+            <h1 id="welcomeMessage"></h1>
+            <!--h1>Welcome, <span id="userEmail"></span></h1-->
+            <p>Manage your policies, payments, and claims in one place.</p>
+        </section>
+
+        <section class="cards-container">
+            <div class="card">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.0dkcxfiaLA2ZVEsShDBfQwHaF_&pid=Api&P=0&h=180" alt="Customize Plan">
+                <h2>Custom Plan</h2>
+                <p>Adjust coverage and benefits to suit your needs.</p>
+                <button onclick="window.location.href='cal.html'">Customize</button>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn-icons-png.flaticon.com/512/9375/9375752.png" alt="View Policies">
+                <h2>View My Policies</h2>
+                <p>See all active policies, coverage details, and renewal dates.</p>
+                <button onclick="window.location.href='mypolicies.html'">View Policies</button>
+            </div>
+
+            <div class="card">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/684/243/original/online-payment.jpg" alt="Make Payment">
+                <h2>Make a Payment</h2>
+                <p>Pay your premiums securely and on time.</p>
+                <button onclick="window.location.href='payments.html'">Pay Now</button>
+            </div>
+
+            <div class="card">
+                <img src="https://www.careinsurance.com/upload_master/media/posts/December2019/j3yIpmye8m3UHddxR77j.jpg" alt="File a Claim">
+                <h2>File a Claim</h2>
+                <p>Report and track your insurance claims easily.</p>
+                <button onclick="window.location.href='fc.html'">File a Claim</button>
+            </div>
+        </section>
+
+        <section class="feedback-container">
+    <h3>Customer Feedback</h3>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://cdn-icons-png.flaticon.com/512/2991/2991312.png" alt="Feedback Icon">
+                <p>How are we doing?</p>
+                <button class="flip-button">Leave Feedback</button>
+            </div>
+            <div class="flip-card-back">
+                <form class="feedback-form">
+                    <label for="rating">Rate your experience:</label>
+                    <select id="rating" name="rating">
+                        <option value="5">★★★★★</option>
+                        <option value="4">★★★★☆</option>
+                        <option value="3">★★★☆☆</option>
+                        <option value="2">★★☆☆☆</option>
+                        <option value="1">★☆☆☆☆</option>
+                    </select>
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" rows="3"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="support-section">
+            <h3>Need Help?</h3>
+            <p><img src="https://icon-library.com/images/customer-support-icon-png/customer-support-icon-png-7.jpg" alt="Support Icon"> Contact our 24/7 customer support team.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Holi Insurance. All rights reserved.</p>
+    </footer>
+    <script src="dashboard.js"></script>
+</body>
+</html>

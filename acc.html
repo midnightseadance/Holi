@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Insurance Portal</title>
+    <link rel="stylesheet" href="account.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <a href="dashboard.html" style="text-decoration: none;"><h1>Manage Your Account</h1></a>
+    </header>
+<main class="account-main">
+        <div class="account-container">
+            <section class="account-details">
+                <h2>Account Details</h2>
+                <div id="details-view">
+                    <p><strong>Name:</strong> <span id="user-name"></span></p>
+                    <p><strong>Email:</strong> <span id="user-email"></span></p>
+                    <p><strong>Phone:</strong> <span id="user-phone">+91 9876543210</span></p>
+                    <p><strong>Address:</strong> <span id="user-address">123, MG Road, Bengaluru, India</span></p>
+                    <button id="edit-details-btn" class="edit-btn">Edit Details</button>
+                </div>
+            
+                <form id="edit-form" style="display: none;">
+                    <label for="edit-name">Name:</label>
+                    <input type="text" id="edit-name" required>
+                    
+                    <label for="edit-email">Email:</label>
+                    <input type="email" id="edit-email" required>
+                    
+                    <label for="edit-phone">Phone:</label>
+                    <input type="text" id="edit-phone" pattern="[0-9]{10}" required>
+                    
+                    <label for="edit-address">Address:</label>
+                    <textarea id="edit-address" rows="3"></textarea>
+                    
+                    <button type="button" id="save-details-btn" class="save-btn">Save</button>
+                    <button type="button" id="cancel-btn" class="cancel-btn">Cancel</button>
+                </form>
+            </section>
+            
+<section class="payment-tracker">
+    <h2>Payment Dashboard</h2>
+
+    <div class="status">
+        <div>
+            <p><strong>Total Paid:</strong> ₹<span id="paidAmount">0.00</span></p>
+        </div>
+        <div>
+            <p><strong>Total Due:</strong> ₹<span id="dueAmount"></span></p>
+        </div>
+    </div>
+
+    <div class="input-section">
+        <h3>Update Payment</h3>
+        <label for="paymentInput">Enter Payment Amount (₹):</label>
+        <input type="number" id="paymentInput" min="0" step="1">
+        <br><br>
+        <button onclick="updatePayment()">Update Payment</button>
+    </div>
+</section>
+            <section class="policies">
+                <h2>My Policies</h2>
+                <div class="loading-policies" id="loading-policies">
+                    Loading your policies...
+                </div>
+                <table class="policy-table" id="policy-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Policy Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Due Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="policy-table-body">
+                        <!-- Policies will be inserted here dynamically -->
+                    </tbody>
+                </table>
+                <div class="no-policies" id="no-policies" style="display: none;">
+                    You don't have any active policies.
+                </div>
+            </section>
+            
+            <section class="vault">
+                <h2>My Vault</h2>
+                <p>Upload your documents for faster processing of your insurance applications:</p>
+                <input type="file" id="file-upload" accept="image/*,application/pdf" multiple>
+                <div class="vault-files">
+                    <h3>Uploaded Documents</h3>
+                    <ul id="file-list">
+                        <!-- Uploaded files will appear here -->
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <script src="account.js"></script>
+</body>
+</html>

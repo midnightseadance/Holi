@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Holi Insurance</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="1000007226.jpg" alt="Holi Insurance Logo" class="logo">
+            <span class="brand-name">Holi Insurance</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="Homepage.html">Login</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="signup-container">
+        <section class="signup-box">
+            <h2>Create Your Account</h2>
+            <p>Join us today and secure your future.</p>
+            <!-- Add this div above the form for error messages -->
+<div id="message" style="margin-bottom: 15px;"></div>
+            <form id="signupForm">
+                <!-- Change this section in your form -->
+<label for="name">Full Name:</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <div class="extra-links">
+                <a href="Homepage.html">Already have an account? Login</a>
+            </div>
+            <p class="security-info">Your personal data is protected with encryption.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Holi Insurance. All rights reserved.</p>
+    </footer>
+    <script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Insurance Plan</title>
+    <link rel="stylesheet" href="customize.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <h1>Design Your Perfect Insurance Plan!</h1>
+    </header>
+
+    <main class="customize-container">
+        <section class="addons">
+            <h2>Select Add-ons</h2>
+
+            <!-- Home Insurance Add-ons -->
+            <div id="home-addons">
+                <h3>Home Insurance Add-ons</h3>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="899"> 
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.Dul2AzcLxrBtEpwI8vh7LgAAAA&pid=Api&P=0&h=180" alt="Fire & Theft Protection" width="30"> Fire & Theft Protection
+                    </label>
+                    <p>Protects your home from fire damage and theft-related losses.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="699"> 
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.q2XVHE4l0Lk7iaPWYCPt5wHaE8&pid=Api&P=0&h=180" alt="Earthquake Cover" width="30"> Earthquake Cover
+                    </label>
+                    <p>Provides financial security in case of damage due to an earthquake.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="499"> 
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.a_Tn07I7922BxHwkajRlOwHaDt&pid=Api&P=0&h=180" alt="Home Contents Protection" width="30"> Home Contents Protection
+                    </label>
+                    <p>Ensures coverage for furniture, appliances, and other belongings inside your home.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="599"> 
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.6MXjdQBoCm8wU7u4tSPwWAHaFj&pid=Api&P=0&h=180" alt="Flood Damage Coverage" width="30"> Flood Damage Coverage
+                    </label>
+                    <p>Compensates for damages caused by floods, ensuring financial safety.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="499"> 
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.rc3UBcQGqAIstFXYw6iN8wHaE8&pid=Api&P=0&h=180" alt="Burglary Protection" width="30"> Burglary Protection
+                    </label>
+                    <p>Covers losses due to burglary and forced entry damages.</p>
+                </div>
+            </div>
+
+            <!-- Life Insurance Add-ons -->
+            <div id="life-addons" style="display: none;">
+                <h3>Life Insurance Add-ons</h3>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="599"> 
+                        <img src="https://www.investopedia.com/thmb/-ggEjI-AlaqtE6a2Kn7HV09SYZA=/1500x844/filters:fill(auto,1)/GettyImages-1046447804-7beb075e44a34852986cd92b2117afc4.jpg" alt="Critical Illness Cover" width="30"> Critical Illness Cover
+                    </label>
+                    <p>Provides financial aid if diagnosed with major illnesses like cancer or stroke.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="799"> 
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.y8E3fzkuT8VuMqQ7s5gY3AHaFj&pid=Api&P=0&h=180" alt="Accidental Death Benefit" width="30"> Accidental Death Benefit
+                    </label>
+                    <p>Offers extra financial support to the family in case of accidental death.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="699"> 
+                        <img src="https://tse3.mm.bing.net/th?id=OIP.iAgkUk32A57gDYpP6uLx6wHaE8&pid=Api&P=0&h=180" alt="Disability Cover" width="30"> Disability Cover
+                    </label>
+                    <p>Ensures income support in case of permanent disability due to an accident.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="599"> 
+                        <img src="https://framerusercontent.com/images/XDaUwAgcZbsgATT5YfXrzF04U.png" alt="Hospitalization Cover" width="30"> Hospitalization Cover
+                    </label>
+                    <p>Covers medical expenses incurred due to hospitalization from illnesses or accidents.</p>
+                </div>
+
+                <div class="addon-box">
+                    <label>
+                        <input type="checkbox" class="addon" data-price="699"> 
+                        <img src="https://cdn.open-pr.com/W/4/W412691468_g.jpg" alt="Child Education Protection" width="30"> Child Education Protection
+                    </label>
+                    <p>Ensures your child's education continues without financial burden in case of an unfortunate event.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Total Amount Display -->
+        <section class="total-amount">
+            <h2>Total Amount: ₹<span id="total-amount">0</span></h2>
+        </section>
+
+        <!-- Done Button -->
+        <button id="done-button">Done</button>
+
+        <!-- Hidden input to store base premium -->
+        <input type="hidden" id="base-premium" value="0">
+    </main>
+
+    <script src="ca.js"></script>
+</body>
+</html>

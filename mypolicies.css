@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #8B1E3F;
+    color: white;
+    padding: 20px;
+}
+
+/* Table Container */
+.table-container {
+    width: 90%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #8B1E3F;
+    color: white;
+}
+
+.paid {
+    color: green;
+    font-weight: bold;
+}
+
+.due {
+    color: red;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.view-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+#pay-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#pay-btn:hover {
+    background-color: #a71d2a;
+}
+
+.download-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.renew-btn {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Policy Details (Hidden Initially) */
+.policy-details {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}

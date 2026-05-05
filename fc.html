@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claims - Insurance Portal</title>
+    <link rel="stylesheet" href="fc.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+</head>
+<body>
+    <header>
+        <h1>File Your Insurance Claim Easily</h1>
+    </header>
+
+    <main class="claims-container">
+        <!-- Claim Form Section -->
+        <section class="claim-form">
+            <h2>Submit Your Claim</h2>
+
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <label for="policy">Select Your Policy:</label>
+                <select id="policy" name="policy">
+                    <option value="home">Home Insurance</option>
+                    <option value="life">Life Insurance</option>
+                    <option value="auto">Auto Insurance</option>
+                </select>
+
+                <label for="documents">Upload Supporting Documents:</label>
+                <input type="file" id="documents" name="documents" accept=".pdf,.jpg,.png">
+
+                <label for="claim-description">Describe Your Claim:</label>
+                <textarea id="claim-description" name="claim-description" placeholder="Briefly explain the claim details..." rows="4"></textarea>
+
+                <button type="button" id="toggleButton">Submit Claim</button>
+            </form>
+        </section>
+
+        <!-- Claim Status Tracker -->
+        <section class="claim-status">
+            <h2>Claim Status</h2>
+            <p id="status-message" style="display: none;">Your Claim is Under Review</p>
+            <div class="status-bar">
+                <span class="status-progress"></span>
+            </div>
+        </section>
+
+        <!-- Placeholder for Claim-Related Images -->
+        <section class="claim-images">
+            <h2>Claim Process Explained</h2>
+            <div class="image-placeholder"><img src="https://www.astera.com/wp-content/uploads/2024/03/Claims-Processing-Steps-1.png" width="700px" height="300px"></div>
+        </section>
+
+        <!-- Helpline Section -->
+        <section class="helpline">
+            <h2>Need Assistance?</h2>
+            <p>For any queries related to your claim, reach out to our support team.</p>
+            <p><strong>Call:</strong> 1800-123-4567</p>
+            <p><strong>Email:</strong> claimsupport@insurance.com</p>
+        </section>
+    </main>
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const hiddenParagraph = document.getElementById('status-message');
+        let isVisible = false;
+
+        toggleButton.addEventListener('click', function() {
+            if (isVisible) {
+                hiddenParagraph.style.display = 'none';
+                isVisible = false;
+            } else {
+                hiddenParagraph.style.display = 'block';
+                isVisible = true;
+            }
+        });
+    </script>
+</body>
+</html>

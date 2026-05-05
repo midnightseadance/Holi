@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Policies</title>
+    <link rel="stylesheet" href="mypolicies.css"> 
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Your Active Insurance Policies</h1>
+    </header>
+
+    <!-- Policies Table -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Policy Type</th>
+                    <th>Start Date</th>
+                    <th>Expiry Date</th>
+                    <th>Add-ons</th>
+                    <th>Payment Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Home Insurance</td>
+                    <td>01-Jan-2024</td>
+                    <td>01-Jan-2025</td>
+                    <td>Fire Protection</td>
+                    <td class="paid">Paid</td>
+                    <td>
+                        <button class="view-btn" onclick="showPolicyDetails('home')">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Life Insurance</td>
+                    <td>04-July-2025</td>
+                    <td>04-Jul-2026</td>
+                    <td>Accidental Death Benefit, Critical Illness Cover,<br>Hospitalization Cover</td>
+                    <td class="due">Due</td>
+                    <td>
+                        <button id="pay-btn">Pay Now</button>
+                        <button class="view-btn" onclick="showPolicyDetails('life')">View Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Policy Details Section (Hidden by Default) -->
+    <div id="policy-details" class="policy-details">
+        <h2>Policy Details</h2>
+        <p><strong>Type:</strong> <span id="policy-type"></span></p>
+        <p><strong>Start Date:</strong> <span id="policy-start"></span></p>
+        <p><strong>Expiry Date:</strong> <span id="policy-expiry"></span></p>
+        <p><strong>Add-ons:</strong> <span id="policy-addons"></span></p>
+        <button class="download-btn">Download Policy</button>
+        <button class="renew-btn">Renew / Upgrade Plan</button>
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="mp.js"></script>
+
+</body>
+</html>

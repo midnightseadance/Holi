@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Insurance Portal</title>
+    <link rel="stylesheet" href="myprofile.css">
+    <link rel="icon" type="image/png" href="favicon-16x16.png">
+    <script defer src="profile.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Manage Your Account</h1>
+    </header>
+
+    <main class="profile-container">
+        <!-- User Information -->
+        <section class="user-info">
+            <h2>User Information</h2>
+            <form id="user-info-form">
+                <label>Name:</label>
+                <input type="text" id="name" readonly>
+
+                <label>Email:</label>
+                <input type="email" id="email" readonly>
+
+                <label>Mobile Number:</label>
+                <input type="text" id="mobile">
+
+                <label>Address:</label>
+                <textarea id="address"></textarea>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </section>
+
+        <!-- Security Settings -->
+        <section class="security">
+            <h2>Security Settings</h2>
+            <button onclick="changePassword()">Change Password</button>
+        </section>
+
+        <!-- Active Policies -->
+        <section class="active-policies">
+            <h2>Active Policies</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Policy Name</th>
+                        <th>Amount</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="active-policy-table">
+                    <!-- Filled by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Policy History -->
+        <section class="policy-history">
+            <h2>Policy History & Payment Logs</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Policy Name</th>
+                        <th>Amount</th>
+                        <th>Payment Date</th>
+                        <th>Invoice</th>
+                    </tr>
+                </thead>
+                <tbody id="policy-table">
+                    <!-- Filled by JavaScript -->
+                </tbody>
+            </table>
+
+            <div class="input-section">
+                <h3>Update Payment</h3>
+                <div class="status">
+                    <div>
+                        <p><strong>Total Paid:</strong> ₹<span id="paidAmount">0.00</span></p>
+                    </div>
+                    <div>
+                        <p><strong>Total Due:</strong> ₹<span id="dueAmount">1000.00</span></p>
+                    </div>
+                </div>
+                <label for="paymentInput">Enter Payment Amount (₹):</label>
+                <input type="number" id="paymentInput" min="0" step="1">
+                <button onclick="updatePayment()">Update Payment</button>
+            </div>
+        </section>
+
+        <!-- Logout -->
+        <section class="logout">
+            <button onclick="logout()">Logout</button>
+        </section>
+    </main>
+</body>
+</html>
